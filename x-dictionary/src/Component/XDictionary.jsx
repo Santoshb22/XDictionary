@@ -32,10 +32,8 @@ const XDictionary = ({ dictionary }) => {
           value={inputSearch}
         />
         <button onClick={handleSearch}>Search</button>
-
-        <br />
-        <b>Definition: </b>
       </div>
+        <strong>Definition: </strong>
 
       <div className="definition">
         <p>{definition}</p>
