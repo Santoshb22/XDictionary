@@ -6,7 +6,12 @@ const XDictionary = ({dictionary}) => {
   
 
     const handleSearch = () => {
-        if(!inputSearch) return;        
+            if (!inputSearch) {
+                setDefinition("Word not found in the dictionary.");
+                return;
+              }
+        }   
+
         const word = dictionary.find(data => data.word.toLowerCase() === inputSearch);
         if(word) {
             setDefination(word.meaning);
