@@ -27,7 +27,7 @@ const XDictionary = ({dictionary}) => {
         <div className="input-box">
             <input 
             type="text"
-            placeholder="Search for a word"
+            placeholder="Search for a word..."
             onChange = {(e) => setInputSearch(e.target.value.toLowerCase())}
             value={inputSearch}
             />
