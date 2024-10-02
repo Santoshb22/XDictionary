@@ -11,14 +11,14 @@ const XDictionary = ({ dictionary }) => {
     }
 
     const word = dictionary.find(
-      (data) => data.word.toLowerCase() === inputSearch
-    );
+      (data) => data.word.toLowerCase() === inputSearch.toLowerCase()
+    )
     if (word) {
       setDefinition(word.meaning);
     } else {
       setDefinition("Word not found in the dictionary.");
     }
-  };
+  }
 
   return (
     <div>
@@ -28,7 +28,7 @@ const XDictionary = ({ dictionary }) => {
         <input
           type="text"
           placeholder="Search for a word..."
-          onChange={(e) => setInputSearch(e.target.value.toLowerCase())}
+          onChange={(e) => setInputSearch(e.target.value)}
           value={inputSearch}
         />
         <button onClick={handleSearch}>Search</button>
@@ -41,7 +41,7 @@ const XDictionary = ({ dictionary }) => {
         <p>{definition}</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default XDictionary;
